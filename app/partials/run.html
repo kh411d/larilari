@@ -1,0 +1,37 @@
+<div class="topcoat-grid">
+    <div class="topcoat-grid__row">
+        <div class="topcoat-grid__column--auto">
+            <div class="topcoat-button-bar full">
+              <div class="topcoat-button-bar__item">
+                <button class="topcoat-button-bar__button--large full" ng-click="toggle('map')">Map</button>
+              </div>
+              <div class="topcoat-button-bar__item">
+                <button class="topcoat-button-bar__button--large full" ng-click="toggle('ticker')">Ticker</button>
+              </div>
+              <div class="topcoat-button-bar__item">
+                <button class="topcoat-button-bar__button--large full" ng-click='reset()'>Reset</button>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="topcoat-grid__row" ng-show="showmap">
+        <div class="topcoat-grid__column--auto">
+            <p>Location: <span id="status">checking...</span></p>   
+            <div id="mapcanvas"></div>
+            <button class="topcoat-button--large full" ng-click='animate(0)'>Animate Track</button>
+        </div>          
+    </div>
+
+    <div class="topcoat-grid__row" ng-show="showticker">
+        <div class="topcoat-grid__column--auto" style="text-align:center;font-size:30px">
+            <h1>{{ stopwatch.text }}</h1>
+        </div>
+    </div>
+    <div class="topcoat-grid__row" ng-show="showticker">
+        <div class="topcoat-grid__column--auto">
+            <button class="topcoat-button--large full" style="height:300px;" ng-show="!isrunning" ng-click='start()'>START</button>
+            <button  class="topcoat-button--large three-quarters" style="height:300px;" ng-show="isrunning" ng-click='lap()'>LAP</button>
+            <button class="topcoat-button--large" style="height:300px;width:24%" ng-show="isrunning" ng-click='end()'>FINISH</button>
+        </div>
+    </div>    
+</div>

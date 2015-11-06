@@ -1,0 +1,19 @@
+<div class="topcoat-grid">
+    <div class="topcoat-grid__row">
+        <div class="topcoat-grid__column--auto">
+            <input type="text" class="topcoat-text-input" id="f1" value="1200" placeholder="1st Friend">
+                <input type="text" class="topcoat-text-input" id="f2" value="1500" placeholder="2nd Friend">
+        </div>
+    </div>
+    <div class="topcoat-grid__row">
+        <div class="topcoat-grid__column--auto">
+            <div id="mapcanvas"></div>
+        </div>          
+    </div>
+    <div class="topcoat-grid__row">
+        <div class="topcoat-grid__column--auto">
+        	<button class="topcoat-button--large full" ng-show="!is_animate" ng-click='simulate()'>Go!</button>
+			<button class="topcoat-button--large full" ng-show="is_animate" ng-click='stop()'>Restart!</button>
+        </div>
+    </div>    
+</div>
